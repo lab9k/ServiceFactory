@@ -1,0 +1,168 @@
+---
+layout: default 
+title: Lab9K 
+---
+
+<div id="home" class="home">
+
+	<div class="home-section-container">
+		<div class="home-section">
+			<div class="home-section-part">
+				<div class="home-section-content">
+					<i class="ion-help-circled"></i>
+					<h2>What?</h2>
+					<p>“<em>Without smart people, there are no smart cities.</em>”</p>
+					<p>We need people to help us cultivate the smartness of our beloved city. So we're calling upon all thinkers, dreamers,
+						builders, designers, coders, pixelpushers, solder artists, data refiners.</p>
+
+					<p>Good ideas need to be built before they can be tested, building takes time and effort Lab9k will secure funding to compensate
+						the hard work done by the participants. At the moment, we're still looking for students to work for us, since studentcontracts
+						are flexible enough to support this model.</p>
+					<p>Also, if you want to do an internship let us know.</p>
+				</div>
+			</div>
+			
+			<div class="home-section-part">
+				<div class="home-section-content">
+					<i class="ion-document-text"></i>
+					<h2>Projects</h2>
+					<dl id="projectlist"></dl>
+				</div>
+			</div>
+
+			<div class="home-section-part">
+				<div class="home-section-content">
+					<i class="ion-filing"></i>
+					<h2>Blog posts</h2>
+					<ul>
+						{% if site.posts.size > 0 %}
+							{% for post in site.posts limit:8 %}
+							<li>
+									<a href="{{ post.url }}">{{ post.title }}</a>
+								  </li>
+								<!-- <li>
+									<img src="{{ post.image_path }}{{ post.slug }}.jpg" class="post-image" alt="{{ post.title }}">
+									<p>{{ post.title }}</p>
+									<div class="black-bg"></div>
+									<a href="{{ post.url }}" class="btn btn-details">read more</a>
+									<a href="{{ post.url }}" style="position: absolute;bottom: -24px;">read more</a>
+								</li> -->
+							{% endfor %}
+						{% else %}
+							<li>There are no posts available.</li>
+						{% endif %}
+					
+					  </ul>
+				</div>
+			</div>
+
+			<div class="home-section-part">
+				<div class="home-section-content">
+					<img class="icon-instagram" src="images/instagram-icon.svg">
+					<h2>Instagram</h2>		
+					<div id="instafeed"></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="home-section side">
+		<div class="home-section-part">
+			<div class="home-section-content">
+				<i class="ion-person"></i>
+				<h2>Who?</h2>
+				<p>Lab9K is an initiative of <a href="https://digipolis.be" target="_blank">Digipolis</a>. We manage, buy or build all IT-projects of the
+					City of Ghent.</p>
+
+				<strong>People</strong>
+				<div class="memberwrapper">
+				</div>
+			</div>
+		</div>		
+
+		<div class="home-section-part">
+			<div class="home-section-content">
+				<i class="ion-map"></i>
+				<h2>Where?</h2>
+				<p><a href="https://youtu.be/7FVgbie3cnM" title="video on how to find us">First floor</a> at <a href="https://www.google.be/maps/@51.0480991,3.7309918,3a,75y,165.5h,101.4t/data=!3m6!1e1!3m4!1sZkPhiI7CU-vs1aO-qe1FtA!2e0!7i13312!8i6656">the Nest in Ghent</a> (the old library).</p>
+				<p>Graaf van Vlaanderenplein, 9000 Gent, Belgium</p>
+			</div>
+		</div>
+
+		<div class="home-section-part">
+			<div class="home-section-content">
+				<i class="ion-ios-information"></i>
+				<h2>Stay Informed</h2>
+				<ul class="posts">
+					<li><a href="list/">Hop on the mailinglist!</a>
+						<br/>Events will be announced on the list first. </li>
+					<li><a href="https://github.com/lab9k">Follow/star the GitHub.</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="home-section-part">
+			<div class="home-section-content">
+				<i class="ion-email"></i>
+				<h2>Contact</h2>
+				<ul class="posts">
+					<li>Use the <a href="/contact">contact form</a><strong class="mobileShowLine"> or send something to <a href="mailto:&#104;&#97;&#110;&#115;&#46;&#102;&#114;&#97;&#105;&#112;&#111;&#110;&#116;&#115;&#64;&#100;&#105;&#103;&#105;&#112;&#111;&#108;&#105;&#115;&#46;&#103;&#101;&#110;&#116;">my mailbox</a></strong>.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="home-section-part">
+			<div class="home-section-content">
+				<i class="ion-person-stalker"></i>
+				<h2>Partners</h2>
+				<div class="partnerswrapper">
+					<div>
+						<a href="https://digipolis.be" target="_blank">
+							<img src="images/partners/digipolis.png" title="Digipolis">
+						</a>
+						<a href="https://stad.gent" target="_blank">
+							<img src="images/partners/stadgent.png" title="Stad Gent">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+<script src="instafeed.min.js"></script>
+<script type="text/javascript">
+    var feed = new Instafeed({
+		get:'user',
+		userId:'5666690431',
+		accessToken:'5666690431.1677ed0.d07923b1732a4468a7137f2a2cb80570'	
+    });
+    feed.run();
+	
+    $.getJSON("https://api.github.com/orgs/lab9k/members", function (result) {
+        for (let obj of result) {
+            $(".memberwrapper").append("<div><a href=\"{$}\" target=\"_blank\"><img src=\"{$}\" title=\"{$}\"></a></div>".format(obj["html_url"], obj["avatar_url"], obj["login"].capitalize()))
+        }
+    });
+	
+    $.getJSON("https://api.github.com/orgs/lab9k/repos", function (result) {
+        for (let obj of result) {
+            if (obj["homepage"] !== null && obj["homepage"] !== "") {
+                $("#projectlist").append("<dt class=\"project-name\"><a href=\"{$}\">{$}</a></dt><dd class=\"project-description\">{$}</dd>".format(obj["html_url"], obj["name"].capitalize(), obj["description"]))
+            } 
+        }
+    });
+
+    // custom method added to string
+    String.prototype.capitalize = function () {
+        return this.charAt(0).toUpperCase() + this.slice(1);
+    }
+    String.prototype.format = function (...a) {
+        let temp = this;
+        for (let letter of a) {
+            temp = temp.replace("{$}", letter)
+        }
+        return temp;
+    }
+</script>
