@@ -3,5 +3,5 @@ highlighter: rouge
 gems:  [jekyll-feed]
 url: https://lab9k.github.io/ServiceFactory/
 title: "Service Factory"
-description:  "Get your latest info on the Lab9K Sessions here."
+description:  "Get your latest info about Service Factory here."
 author: HansF

@@ -1,6 +1,6 @@
 ---
 layout: default 
-title: Lab9K 
+title: Service factory 
 ---
 
 <div id="home" class="home">
@@ -22,31 +22,20 @@ title: Lab9K
 				</div>
 			</div>
 			
-			<div class="home-section-part">
-				<div class="home-section-content">
-					<i class="ion-document-text"></i>
-					<h2>Projects</h2>
-					<dl id="projectlist"></dl>
-				</div>
-			</div>
 
 			<div class="home-section-part">
 				<div class="home-section-content">
 					<i class="ion-filing"></i>
 					<h2>Blog posts</h2>
 					<ul>
+						
 						{% if site.posts.size > 0 %}
-							{% for post in site.posts limit:8 %}
-							<li>
-									<a href="{{ post.url }}">{{ post.title }}</a>
-								  </li>
-								<!-- <li>
-									<img src="{{ post.image_path }}{{ post.slug }}.jpg" class="post-image" alt="{{ post.title }}">
-									<p>{{ post.title }}</p>
-									<div class="black-bg"></div>
-									<a href="{{ post.url }}" class="btn btn-details">read more</a>
-									<a href="{{ post.url }}" style="position: absolute;bottom: -24px;">read more</a>
-								</li> -->
+							{% for project in site.categories.project %}
+									<li>
+										<a href="{{ project.url }}">{{ project.title }}</a>
+										<p>{{ project.meta }}</p>
+									</li>
+
 							{% endfor %}
 						{% else %}
 							<li>There are no posts available.</li>
@@ -76,8 +65,7 @@ title: Lab9K
 					City of Ghent.</p>
 
 				<strong>People</strong>
-				<div class="memberwrapper">
-				</div>
+				
 			</div>
 		</div>		
 
@@ -135,24 +123,12 @@ title: Lab9K
 <script type="text/javascript">
     var feed = new Instafeed({
 		get:'user',
-		userId:'5666690431',
-		accessToken:'5666690431.1677ed0.d07923b1732a4468a7137f2a2cb80570'	
+		userId:'6298482520',
+		accessToken:'6298482520.74aec84.59a7792dcb90443f85ba5edb991ebb9f'	 
     });
     feed.run();
 	
-    $.getJSON("https://api.github.com/orgs/lab9k/members", function (result) {
-        for (let obj of result) {
-            $(".memberwrapper").append("<div><a href=\"{$}\" target=\"_blank\"><img src=\"{$}\" title=\"{$}\"></a></div>".format(obj["html_url"], obj["avatar_url"], obj["login"].capitalize()))
-        }
-    });
-	
-    $.getJSON("https://api.github.com/orgs/lab9k/repos", function (result) {
-        for (let obj of result) {
-            if (obj["homepage"] !== null && obj["homepage"] !== "") {
-                $("#projectlist").append("<dt class=\"project-name\"><a href=\"{$}\">{$}</a></dt><dd class=\"project-description\">{$}</dd>".format(obj["html_url"], obj["name"].capitalize(), obj["description"]))
-            } 
-        }
-    });
+ 
 
     // custom method added to string
     String.prototype.capitalize = function () {
