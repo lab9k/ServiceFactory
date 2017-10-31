@@ -26,22 +26,29 @@ title: Service factory
 			<div class="home-section-part">
 				<div class="home-section-content">
 					<i class="ion-filing"></i>
+					
 					<h2>Blog posts</h2>
-					<ul>
-						
+					<ul class="posts">
+						<h3>Projects</h3>
 						{% if site.posts.size > 0 %}
-							{% for project in site.categories.project %}
-									<li>
-										<a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a>
-										<p>{{ project.meta }}</p>
+							{% for post in site.categories.project %}
+									<li class="post">
+										<img src="{{ site.baseurl }}{{ post.image }}" class="post-image" alt="{{ post.title }}">
+										<a href="{{ site.baseurl }}{{ post.url }}">{{ project.title }}</a>
+										<div class="black-bg"></div>
+										
+										<a href="{{ site.baseurl }}{{ post.url }}" style="position: absolute;bottom: -24px;">{{ post.title }}</a>
 									</li>
 
 							{% endfor %}
 						{% else %}
 							<li>There are no posts available.</li>
 						{% endif %}
-					
+														
 					  </ul>
+
+					  
+					
 				</div>
 			</div>
 
