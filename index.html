@@ -32,7 +32,7 @@ title: Service factory
 						{% if site.posts.size > 0 %}
 							{% for project in site.categories.project %}
 									<li>
-										<a href="{{ project.url }}">{{ project.title }}</a>
+										<a href="{{ site.url }}{{ project.url }}">{{ project.title }}</a>
 										<p>{{ project.meta }}</p>
 									</li>
 
