@@ -454,6 +454,10 @@ ul.posts span {
 #mc_embed_signup .mc-field-group {
     padding: 0;
 }
+
+
+
+
     
 /*******************
 ****   MOBILE   ****
@@ -643,3 +647,6 @@ img.post-image:focus + p + div + a.btn-details,
 img.post-image:active + p + div + a.btn-details {
     z-index: 15;
 }
+
+
+

@@ -3,120 +3,232 @@ layout: default
 title: Service factory 
 ---
 
-<div id="home" class="home">
 
-	<div class="home-section-container">
-		<div class="home-section">
-			<div class="home-section-part">
-				<div class="home-section-content">
-					<i class="ion-help-circled"></i>
-					<h2>What?</h2>
-					<p>“<em>Without smart people, there are no smart cities.</em>”</p>
-					<p>We need people to help us cultivate the smartness of our beloved city. So we're calling upon all thinkers, dreamers,
-						builders, designers, coders, pixelpushers, solder artists, data refiners.</p>
-
-					<p>Good ideas need to be built before they can be tested, building takes time and effort Lab9k will secure funding to compensate
-						the hard work done by the participants. At the moment, we're still looking for students to work for us, since studentcontracts
-						are flexible enough to support this model.</p>
-					<p>Also, if you want to do an internship let us know.</p>
-				</div>
+<div id="content" role="main">
+		<section class="section swatch-red-white section-normal ">
+			<div class="background-media" style="background-image:url('http://www.adam-bray.com/wp-content/uploads/2017/02/G0060818.jpg');background-repeat:no-repeat;background-size:cover;background-attachment:scroll;background-position:center 30%;"></div>
+			<div class="background-overlay" style="background-color:rgba(0,0,0,0.5)"></div>
+			<div class="container">
+				<header class="section-header text-center no-underline">
+					<h1 class="headline super regular">Welcome</h1>
+					<p>Web Development and Personal Interests</p>
+				</header>
 			</div>
-			
-
-			<div class="home-section-part">
-				<div class="home-section-content">
-					<i class="ion-filing"></i>
-					
-					<h2>Blog posts</h2>
-					<ul class="posts">
-						<h3>Projects</h3>
-						{% if site.posts.size > 0 %}
-							{% for post in site.categories.project %}
-									<li class="post">
-										<img src="{{ site.baseurl }}{{ post.image }}" class="post-image" alt="{{ post.title }}">
-										<a href="{{ site.baseurl }}{{ post.url }}">{{ project.title }}</a>
-										<div class="black-bg"></div>
-										
-										<a href="{{ site.baseurl }}{{ post.url }}" style="position: absolute;bottom: -24px;">{{ post.title }}</a>
-									</li>
-
-							{% endfor %}
-						{% else %}
-							<li>There are no posts available.</li>
-						{% endif %}
-														
-					  </ul>
-
-					  
-					
+		</section>
+		<article id="post-62" class="post-62 page type-page status-publish hentry">
+			<div class="mailmunch-forms-before-post" style="display: none !important;"></div>
+			<section class="section swatch-white-red section-normal has-top ">
+				<div class="decor-top">
+					<svg class="decor" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0 0 L50 100 L100 0 L100 100 L0 100" stroke-width="0"></path>
+					</svg>
 				</div>
-			</div>
-
-			<div class="home-section-part">
-				<div class="home-section-content">
-					<img class="icon-instagram" src="images/instagram-icon.svg">
-					<h2>Instagram</h2>		
-					<div id="instafeed"></div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-	<div class="home-section side">
-		<div class="home-section-part">
-			<div class="home-section-content">
-				<i class="ion-person"></i>
-				<h2>Who?</h2>
-				<p>Lab9K is an initiative of <a href="https://digipolis.be" target="_blank">Digipolis</a>. We manage, buy or build all IT-projects of the
-					City of Ghent.</p>
-
-				<strong>People</strong>
+				<div class="background-media"></div>
+				<div class="background-overlay" style=""></div>
+				<div class="container">
+					<div class="row vertical-top">
+						<div class="col-md-12  text-default">
+							<div class="col-2-3">
+									<h2>What?</h2>
+									<p>“<em>Without smart people, there are no smart cities.</em>”</p>
+									<p>We need people to help us cultivate the smartness of our beloved city. So we're calling upon all thinkers, dreamers,
+										builders, designers, coders, pixelpushers, solder artists, data refiners.</p>
 				
-			</div>
-		</div>		
-
-
-
-		<div class="home-section-part">
-			<div class="home-section-content">
-				<i class="ion-ios-information"></i>
-				<h2>Stay Informed</h2>
-				<ul class="posts">
-					<li><a href="list/">Hop on the mailinglist!</a>
-						<br/>Events will be announced on the list first. </li>
-					<li><a href="https://github.com/lab9k">Follow/star the GitHub.</a></li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="home-section-part">
-			<div class="home-section-content">
-				<i class="ion-email"></i>
-				<h2>Contact</h2>
-				<ul class="posts">
-					<li>Use the <a href="/contact">contact form</a><strong class="mobileShowLine"> or send something to <a href="mailto:&#104;&#97;&#110;&#115;&#46;&#102;&#114;&#97;&#105;&#112;&#111;&#110;&#116;&#115;&#64;&#100;&#105;&#103;&#105;&#112;&#111;&#108;&#105;&#115;&#46;&#103;&#101;&#110;&#116;">my mailbox</a></strong>.</li>
-				</ul>
-			</div>
-		</div>
-		<div class="home-section-part">
-			<div class="home-section-content">
-				<i class="ion-person-stalker"></i>
-				<h2>Partners</h2>
-				<div class="partnerswrapper">
-					<div>
-						<a href="https://digipolis.be" target="_blank">
-							<img src="images/partners/digipolis.png" title="Digipolis">
-						</a>
-						<a href="https://stad.gent" target="_blank">
-							<img src="images/partners/stadgent.png" title="Stad Gent">
-						</a>
+									<p>Good ideas need to be built before they can be tested, building takes time and effort Lab9k will secure funding to compensate
+										the hard work done by the participants. At the moment, we're still looking for students to work for us, since studentcontracts
+										are flexible enough to support this model.</p>
+									<p>Also, if you want to do an internship let us know.</p>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</section>
+			<section class="section swatch-light-grey section-normal ">
+				
+				<div class="container">
+					<header class="section-header text-center no-underline">
+						<h1 class="headline  regular">Recent Project Posts</h1>
+					</header>
+					<div class="row vertical-top">
+						<div class="col-md-12  text-default">
+							<div class="row">
+								<ul class="list-unstyled list-container">
+									{% if site.posts.size > 0 %}
+										{% for post in site.categories.project limit:3 %}
+										<li class="post-item col-md-4">
+												<div class="grid-post swatch-white-red">
+													<article id="post-191" class="post-showinfo  post-191 post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
+														<div class="post-media overlay">
+															<a href="{{ site.baseurl }}{{ post.url }}" class="feature-image hover-animate">
+																<img src="{{ site.baseurl }}{{ post.image }}" alt="img-4-1170x400.png">
+																<i class="fa fa-link"></i>
+															</a>
+														</div>
+														<div class="post-head small-screen-center">
+															<h2 class="post-title entry-title">
+																<a href="https://www.adam-bray.com/2017/04/30/increase-traffic-being-mobile-friendly/" title="Permalink to Increase Traffic being Mobile Friendly"
+																	rel="bookmark">
+																	{{ post.title }} </a>
+															</h2>
+															
+															<small class="post-date">
+																	{{ post.date | date_to_long_string }} </small>
+															<div class="post-icon">
+																<div class="hex hex-big">
+																	<i class="fa fa-file-text"></i>
+																</div>
+															</div>
+														</div>
+														<div class="post-body entry-content">
+															<p>Most website owners dream of ranking in the top 10 of Google for
+																certain keywords. Not only does this massively increase traffic,
+																but it can prove highly lucrative for the website owner.</p>
+															<a href="{{ site.baseurl }}{{ post.url }}" class="more-link">Read more</a>
+														</div>
+														<div class="post-extras bordered text-center">
+															<div class="text-center">
+		
+																<span class="post-tags">
+																	<i class="fa fa-tags"></i>
+																	<a href="" rel="tag">CSS</a>,
+																	<a href="" rel="tag">HTML</a>,
+																	<a href="" rel="tag">mobile</a>
+																</span>
+		
+															</div>
+														</div>
+														<span class="hide">
+															<span class="author vcard">
+																<span class="fn">Adam</span>
+															</span>
+															<span class="entry-title">Increase Traffic being Mobile Friendly</span>
+															<time class="entry-date updated" datetime="2017-04-30T19:16:36+00:00">04.30.2017</time>
+														</span>
+													</article>
+												</div>
+											</li>
+								
+			
+										{% endfor %}
+									{% else %}
+										<li>There are no posts available.</li>
+									{% endif %}
 
+
+
+
+									
+									
+									</li>
+								</ul>
+							</div>
+							<div class="text-center ">
+								<ul class="post-navigation pagination">
+									<li class="disabled">
+										<a>‹</a>
+									</li>
+									<li class="active">
+										<span class="current">1</span>
+									</li>
+									<li>
+										<a href="https://www.adam-bray.com/page/2/" class="inactive">2</a>
+									</li>
+									<li>
+										<a href="https://www.adam-bray.com/page/2/">›</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section swatch-white-red section-normal ">
+				<div class="background-media"></div>
+				<div class="background-overlay" style=""></div>
+				<div class="container">
+					<div class="row vertical-top">
+						<div class="col-md-12  text-default">
+							<header class="section-header text-center no-underline">
+								<h1 class="headline regular">Explain the concept of Service factory using images</h1>
+							</header>
+							<ul class="list-unstyled row horizontal-icon-border box-list">
+								<li class="col-md-4">
+									<div class="box-round box-huge">
+										<div class="box-dummy"></div>
+										<a class="box-inner" href="https://www.adam-bray.com/services/content-writing/" target="_self">
+											<i class="fa fa-pencil" data-animation="bounce"></i>
+										</a>
+									</div>
+									<h3 class="text-center">
+										<a href="https://www.adam-bray.com/services/content-writing/" target="_self">
+											Define Challenges </a>
+									</h3>
+									<p class="text-center">
+										Are you looking for great content written by university educated writers? Then look no further. We can provide sucinct, high
+										ranking content in a matter of days. </p>
+								</li>
+								<li class="col-md-4">
+									<div class="box-round box-huge">
+										<div class="box-dummy"></div>
+										<a class="box-inner" href="https://www.adam-bray.com/services/blog-management/" target="_self">
+											<i class="fa fa-rocket" data-animation="wiggle"></i>
+										</a>
+									</div>
+									<h3 class="text-center">
+										<a href="https://www.adam-bray.com/services/blog-management/" target="_self">
+											Define projects </a>
+									</h3>
+									<p class="text-center">
+										You’ve heard about blogging but you don’t know where to get started? Or maybe you have a blog that needs improving… let me
+										help. </p>
+								</li>
+								<li class="col-md-4">
+									<div class="box-round box-huge">
+										<div class="box-dummy"></div>
+										<a class="box-inner" href="https://www.adam-bray.com/services/seo-analysis/" target="_self">
+											<i class="fa fa-sellsy" data-animation="bounce"></i>
+										</a>
+									</div>
+									<h3 class="text-center">
+										<a href="https://www.adam-bray.com/services/seo-analysis/" target="_self">
+											Distribute Projects </a>
+									</h3>
+									<p class="text-center">
+										Search Engine Optimisation and Social Awareness are key in today’s markets. I can boost your rankings to really drive visitors
+										and sales for your website. </p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="mailmunch-forms-after-post" style="display: none !important;"></div>
+			<span class="hide">
+				<span class="author vcard">
+					<span class="fn">Adam Bray</span>
+				</span>
+				<span class="entry-title">Home</span>
+				<time class="entry-date updated" datetime="2017-02-15T15:19:35+00:00">02.15.2017</time>
+			</span>
+		</article>
+
+
+	
+			
+
+	
+
+	
+				
+					<h2>Instagram</h2>		
+					<div id="instafeed"></div>
+		
+	
+
+		</div>
 	</div>
+
+
 
 </div>
 <script src="instafeed.min.js"></script>
@@ -124,7 +236,7 @@ title: Service factory
     var feed = new Instafeed({
 		get:'user',
 		userId:'6298482520',
-		accessToken:'6298482520.74aec84.59a7792dcb90443f85ba5edb991ebb9f'	 
+		accessToken:'6298482520.74aec84.59a7792dcb90443f85ba5edb991ebb9f',		
     });
     feed.run();
 	
