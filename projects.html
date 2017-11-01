@@ -6,7 +6,6 @@ title: Service factory
 	<link rel="stylesheet" href="../css/projects.css">
 </head>
 
-<<<<<<< HEAD
 
 
 <div id="content" role="main">
@@ -55,37 +54,6 @@ title: Service factory
 					<span class="post-link">
 										<i class="fa fa-comments"></i>
 						<a href="">1 comment</a>                            </span>
-=======
-	<div class="home-section-container">
-		<div class="home-section-part">
-				<div class="home-section-content">
-					<i class="ion-filing"></i>
-					<h2>Projects</h2>
-					<ul class="projects">
-						{% if site.posts.size > 0 %}
-							{% for post in site.categories.project %}
-								{% if post.tags.first != "future" %}
-									<li class="project">
-										<h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>	</h2>
-										<a href="{{ site.url }}/contact"> Contact </a>
-										<img src="{{ site.baseurl }}{{ post.image }}" class="project-image" alt="{{ post.title }}">
-										<ul class="tags">
-										 	{% for tag in post.tags %}
-										    	{% if tag.first != "future" %}
-										    		<li class="tag">{{ tag }}</li>
-										    	{% endif %}
-										  	{% endfor %}
-										</ul> 
-										{{ post.content | strip_html | truncatewords: 50 }}
-										<a href="{{ site.baseurl }}{{ post.url }}"> Read more </a>
-									</li>
-								{% endif %}
-							{% endfor %}
-						{% else %}
-							<li>There are no posts available.</li>
-						{% endif %}								
-					 </ul>
->>>>>>> 498f717365420bf9c16eeacd2ecffa79bfe19c4e
 				</div>
 			</div>
 		<span class="hide"><span class="author vcard"><span class="fn">Adam</span></span><span class="entry-title">{{ post.title }}</span>
