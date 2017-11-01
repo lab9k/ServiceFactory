@@ -37,13 +37,16 @@
                     <a href="/" class="logo"><img src="/images/logo.svg"></a>
                     <a href="{{site.url}}" id="homelink"><i class="ion-ios-arrow-left"></i></a>
                     {{ content }}
+                    <a href="{{ site.baseurl }}contact"> Ik wens mee te doen aan dit project </a>
                 </div>
             </div>
             <aside>
-                <h4>All posts</h4>
+                <h4>Other Projects</h4>
                 <ul>
-                {% for post in site.posts limit:8 %}
-                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% for post in site.categories.project limit:8 %}
+                    {% if post.tags.first != "future" %}
+                        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                    {% endif %}    
                 {% endfor %}       
                  
                 </ul>
