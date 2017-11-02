@@ -3,7 +3,6 @@ layout: default
 title: Service factory
 ---
 
-
 <head>
 	<link rel="stylesheet" href="../css/projects.css">
 </head>
@@ -29,7 +28,7 @@ title: Service factory
 			<div class="row">
 				<div class="col-md-9">
 					{% if site.posts.size > 0 %}
-						{% for post in site.categories.project %}
+						{% for post in site.categories.project | sort: 'weight' %}
 							<article id="post-191" class="post-showinfo  post-191 post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
 								<div class="post-media overlay">
 									<a href="{{ site.baseurl }}{{ post.url }}" class="feature-image hover-animate">
@@ -37,14 +36,8 @@ title: Service factory
 								</div>
 								<div class="post-head small-screen-center">
 									<h2 class="post-title entry-title">
-										<a href="{{ site.baseurl }}{{ post.url }}" title="Permalink to Increase Traffic being Mobile Friendly" rel="bookmark"> {{ post.title }} </a>
-									</h2>
-									<small class="post-author">
-										<a href=""> Adam </a>
-									</small>
-									<small class="post-date">
-										30th April 2017
-									</small>
+										<a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}" rel="bookmark"> {{ post.title }} </a>
+									</h2>									
 									<div class="post-icon">
 										<div class="hex hex-big">
 											<i class="fa fa-file-text"></i>
@@ -52,7 +45,7 @@ title: Service factory
 									</div>
 								</div>
 								<div class="post-body entry-content">
-									<p>Most website owners dream of ranking in the top 10 of Google for certain keywords. Not only does this massively increase traffic, but it can prove highly lucrative for the website owner.</p>
+									<p>{{ post.meta }}</p>
 									<a href="{{ site.baseurl }}{{ post.url }}" class="more-link">Read more</a>
 								</div>
 								<div class="post-extras bordered text-center">
@@ -73,7 +66,7 @@ title: Service factory
 				</div>
 				<aside class="col-md-3 sidebar">
 					<div id="search-4" class="sidebar-widget  widget_search">
-						<form role="search" method="get" id="searchform" action="https://www.adam-bray.com/">
+						<form role="search" method="get" id="searchform" action="">
 							<div class="input-group">
 								<input type="text" value="" name="s" id="s" class="form-control" placeholder="Search">
 								<span class="input-group-btn"><button class="btn" type="submit" id="searchsubmit" value="Search">
@@ -82,6 +75,14 @@ title: Service factory
 							</span>
 						</div>
 					</form>
+
+					<form action="/projects.html" method="get">
+						<label for="search-box">Search</label>
+						<input type="text" id="search-box" name="query">
+						<input type="submit" value="search">
+					  </form>
+					  
+					  <ul id="search-results"></ul>
 				</div>
 				<div id="categories-3" class="sidebar-widget  widget_categories">
 					<h3 class="sidebar-header">Categories</h3>		
@@ -103,33 +104,36 @@ title: Service factory
 						</ul>
 					</div>
 				</div>
+				{% if site.categories.project.size > 0 %}
 				<div id="recent-posts-3" class="sidebar-widget  widget_recent_entries">
-					<h3 class="sidebar-header">Recent Posts</h3>
-					<ul>
-						{% if site.posts.size > 0 %}
-							{% for post in site.categories.project | sort: 'date' %}
-							<li>
-								<div class="post-icon">
-									<i class="fa fa-file-text"></i>
-								</div>
-								<a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-								<small></small>
-							</li>
-							{% endfor %}
-						{% endif %}
+					<h3 class="sidebar-header">Recent Projects</h3>
+					<ul>				
+						{% assign sorted = site.categories.project | sort: 'date' | sort: 'weight'  %}						
+						{% for post in sorted %}
+						<li>
+							<div class="post-icon">
+								<i class="fa fa-file-text"></i>
+							</div>
+							<a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+							<small></small>
+						</li>
+						{% endfor %}
+						
 					</ul>
 				</div>
-				<div id="archives-3" class="sidebar-widget  widget_archive">
+				{% endif %}
+				<div id="archives-3" class="sidebar-widget widget_archive">
 					<h3 class="sidebar-header">Archives</h3>
 						<ul>
-							<li><a href="https://www.adam-bray.com/2017/04/">April 2017</a></li>
-							<li><a href="https://www.adam-bray.com/2017/02/">February 2017</a></li>
+							<li><a href="">April 2017</a></li>
+							<li><a href="">February 2017</a></li>
 						</ul>
 				</div></aside>
 			</div>
 		</div>
 	</section>
 </div>
+
 
 
 
@@ -148,3 +152,5 @@ title: Service factory
         return temp;
     }
 </script>
+
+
