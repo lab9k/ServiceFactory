@@ -183,24 +183,19 @@ title: Service factory
 															<a href="{{ site.baseurl }}{{ post.url }}" class="more-link">Read more</a>
 														</div>
 														<div class="post-extras bordered text-center">
-															<div class="text-center">
-															
-																
+															<div class="text-center">			
 																<span class="post-tags">
 																	<i class="fa fa-tags"></i>
 																	{% for tag in post.tags %}
-																	<a href="" rel="tag">{{ tag | first }} test</a>,
+																		<a href="" rel="tag">{{ tag }}</a>
 																	{% endfor %}																
-																</span>
-		
+																</span>	
 															</div>
 														</div>									
 													</article>
 												</div>
 											</li>								
-										{% endfor %}
-									
-														
+										{% endfor %}								
 								</ul>
 							</div>
 
@@ -252,15 +247,8 @@ title: Service factory
 			{% endif %}		
 			
 		</article>
-
-		
-
-	
 					<h2>Instagram</h2>		
 					<div id="instafeed"></div>
-		
-	
-
 		</div>
 	</div>
 
