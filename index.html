@@ -92,7 +92,7 @@ title: Service factory
 														</div>
 														<div class="post-head small-screen-center">
 															<h2 class="post-title entry-title">
-																<a href="" title="Permalink to Increase Traffic being Mobile Friendly"
+																<a href="{{ site.baseurl }}{{ post.url }}" title="Permalink to Increase Traffic being Mobile Friendly"
 																	rel="bookmark">
 																	{{ post.title }} </a>
 															</h2>
@@ -111,11 +111,13 @@ title: Service factory
 														</div>
 														<div class="post-extras bordered text-center">
 															<div class="text-center">
+															
+																
 																<span class="post-tags">
-																	<i class="fa fa-tags"></i>																
-																	<a href="" rel="tag">CSS</a>,
-																	<a href="" rel="tag">HTML</a>,
-																	<a href="" rel="tag">mobile</a>
+																	<i class="fa fa-tags"></i>
+																	{% for tag in post.tags %}
+																	<a href="" rel="tag">{{ tag | first }} test</a>,
+																	{% endfor %}																
 																</span>
 		
 															</div>
