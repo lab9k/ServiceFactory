@@ -11,7 +11,7 @@ title: Service factory
 		<div class="container">
 			<header class="section-header text-center no-underline">
 				<h1 class="headline super regular">Welcome</h1>
-				<p>Web Development and Personal Interests</p>
+				<p>Service factory homepage</p>
 			</header>
 		</div>
 	</section>
@@ -25,112 +25,7 @@ title: Service factory
 			</div>
 			<div class="background-media"></div>
 			<div class="background-overlay" style=""></div>
-			<div class="container">
-				<div class="row vertical-top">
-					<div class="col-md-12  text-default">
-						<div class="col-2-3">
-								<h2>What?</h2>
-								<p>“<em>Without smart people, there are no smart cities.</em>”</p>
-								<p>We need people to help us cultivate the smartness of our beloved city. So we're calling upon all thinkers, dreamers,
-									builders, designers, coders, pixelpushers, solder artists, data refiners.</p>
 			
-								<p>Good ideas need to be built before they can be tested, building takes time and effort Lab9k will secure funding to compensate
-									the hard work done by the participants. At the moment, we're still looking for students to work for us, since studentcontracts
-									are flexible enough to support this model.</p>
-								<p>Also, if you want to do an internship let us know.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="section swatch-light-grey section-normal ">
-			<div class="container">
-				<header class="section-header text-center no-underline">
-					<h1 class="headline  regular">Recent Project Posts</h1>
-				</header>
-				<div class="row vertical-top">
-					<div class="col-md-12  text-default">
-						<div class="row">
-							<ul class="list-unstyled list-container">
-								{% if site.posts.size > 0 %}
-									{% for post in site.categories.project limit:3 %}
-										<li class="post-item col-md-4">
-											<div class="grid-post swatch-white-red">
-												<article id="post-191" class="post-showinfo  post-191 post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
-													<div class="post-media overlay">
-														<a href="{{ site.baseurl }}{{ post.url }}" class="feature-image hover-animate">
-															<img src="{{ site.baseurl }}{{ post.image }}" alt="img-4-1170x400.png">
-															<i class="fa fa-link"></i>
-														</a>
-													</div>
-													<div class="post-head small-screen-center">
-														<h2 class="post-title entry-title">
-															<a href="" title="Permalink to Increase Traffic being Mobile Friendly"
-																rel="bookmark">
-																{{ post.title }} </a>
-														</h2>
-														
-														<small class="post-date">
-																{{ post.date | date_to_long_string }} </small>
-														<div class="post-icon">
-															<div class="hex hex-big">
-																<i class="fa fa-file-text"></i>
-															</div>
-														</div>
-													</div>
-													<div class="post-body entry-content">
-														<p>Most website owners dream of ranking in the top 10 of Google for
-															certain keywords. Not only does this massively increase traffic,
-															but it can prove highly lucrative for the website owner.</p>
-														<a href="{{ site.baseurl }}{{ post.url }}" class="more-link">Read more</a>
-													</div>
-													<div class="post-extras bordered text-center">
-														<div class="text-center">
-	
-															<span class="post-tags">
-																<i class="fa fa-tags"></i>
-																<a href="" rel="tag">CSS</a>,
-																<a href="" rel="tag">HTML</a>,
-																<a href="" rel="tag">mobile</a>
-															</span>
-	
-														</div>
-													</div>
-													<span class="hide">
-														<span class="author vcard">
-															<span class="fn">Adam</span>
-														</span>
-														<span class="entry-title">Increase Traffic being Mobile Friendly</span>
-														<time class="entry-date updated" datetime="2017-04-30T19:16:36+00:00">04.30.2017</time>
-													</span>
-												</article>
-											</div>
-										</li>
-									{% endfor %}
-								{% else %}
-									<li>There are no posts available.</li>
-								{% endif %}
-							</ul>
-						</div>
-						<div class="text-center ">
-							<ul class="post-navigation pagination">
-								<li class="disabled">
-									<a>‹</a>
-								</li>
-								<li class="active">
-									<span class="current">1</span>
-								</li>
-								<li>
-									<a href="" class="inactive">2</a>
-								</li>
-								<li>
-									<a href="">›</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
 		</section>
 		<section class="section swatch-white-red section-normal ">
 			<div class="background-media"></div>
@@ -192,17 +87,95 @@ title: Service factory
 				</div>
 			</div>
 		</section>
+		<section class="section swatch-light-grey section-normal ">
+			<div class="container">
+				<header class="section-header text-center no-underline">
+					<h1 class="headline  regular">News & Challenges</h1>
+				</header>
+				<div class="row vertical-top">
+					<div class="col-md-12  text-default">
+						<div class="row">
+							<ul class="list-unstyled list-container">
+								{% if site.posts.size > 0 %}
+									{% for post in site.categories.project limit:3 %}
+										<li class="post-item col-md-4">
+											<div class="grid-post swatch-white-red">
+												<article id="post-191" class="post-showinfo  post-191 post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
+													<div class="post-media overlay">
+														<a href="{{ site.baseurl }}{{ post.url }}" class="feature-image hover-animate">
+															<img src="{{ site.baseurl }}{{ post.image }}" alt="img-4-1170x400.png">
+															<i class="fa fa-link"></i>
+														</a>
+													</div>
+													<div class="post-head small-screen-center">
+														<h2 class="post-title entry-title">
+															<a href="" title="Permalink to Increase Traffic being Mobile Friendly"
+																rel="bookmark">
+																{{ post.title }} </a>
+														</h2>
+														
+														<small class="post-date">
+																{{ post.date | date_to_long_string }} </small>
+														<div class="post-icon">
+															<div class="hex hex-big">
+																<i class="fa fa-file-text"></i>
+															</div>
+														</div>
+													</div>
+													<div class="post-body entry-content">
+														<p>Most website owners dream of ranking in the top 10 of Google for
+															certain keywords. Not only does this massively increase traffic,
+															but it can prove highly lucrative for the website owner.</p>
+														<a href="{{ site.baseurl }}{{ post.url }}" class="more-link">Read more</a>
+													</div>
+													<div class="post-extras bordered text-center">
+														<div class="text-center">
+	
+															<span class="post-tags">
+																<i class="fa fa-tags"></i>
+																<a href="" rel="tag">CSS</a>,
+																<a href="" rel="tag">HTML</a>,
+																<a href="" rel="tag">mobile</a>
+															</span>
+	
+														</div>
+													</div>
+												</article>
+											</div>
+										</li>
+									{% endfor %}
+								{% else %}
+									<li>There are no posts available.</li>
+								{% endif %}
+							</ul>
+						</div>
+						<div class="text-center ">
+							<ul class="post-navigation pagination">
+								<li class="disabled">
+									<a>‹</a>
+								</li>
+								<li class="active">
+									<span class="current">1</span>
+								</li>
+								<li>
+									<a href="" class="inactive">2</a>
+								</li>
+								<li>
+									<a href="">›</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<div class="mailmunch-forms-after-post" style="display: none !important;"></div>
-		<span class="hide">
-			<span class="author vcard">
-				<span class="fn">Adam Bray</span>
-			</span>
-			<span class="entry-title">Home</span>
-			<time class="entry-date updated" datetime="2017-02-15T15:19:35+00:00">02.15.2017</time>
-		</span>
+		
 	</article>
-	<h2>Instagram</h2>		
-	<div id="instafeed"></div>
+
+	<!-- <h2>Instagram</h2>		
+	<div id="instafeed"></div> -->
+
 </div>
 
 <script src="instafeed.min.js"></script>
