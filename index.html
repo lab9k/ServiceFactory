@@ -70,17 +70,16 @@ title: Service factory
 
 
 
-			
+			{% if site.categories.news.size > 0 %}
 			<section class="section swatch-light-grey section-normal ">
 				<div class="container">
 					<header class="section-header text-center no-underline">
-						<h1 class="headline  regular">Recent Project Posts</h1>
+						<h1 class="headline  regular">News posts</h1>
 					</header>
 					<div class="row vertical-top">
 						<div class="col-md-12  text-default">
 							<div class="row">
-								<ul class="list-unstyled list-container">
-									{% if site.posts.size > 0 %}
+								<ul class="list-unstyled list-container">								
 										{% for post in paginator.posts %}
 										<li class="post-item col-md-4">
 												<div class="grid-post swatch-white-red">
@@ -125,9 +124,8 @@ title: Service factory
 												</div>
 											</li>								
 										{% endfor %}
-									{% else %}
-										<li>There are no posts available.</li>
-									{% endif %}							
+									
+														
 								</ul>
 							</div>
 
@@ -176,6 +174,7 @@ title: Service factory
 					</div>
 				</div>
 			</section>
+			{% endif %}		
 			
 		</article>
 
